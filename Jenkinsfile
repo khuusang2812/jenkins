@@ -1,16 +1,14 @@
-pipeline {
-    agent any
-	
-    stages {
-        stage('Build') {
-		
-			when{
-				changeset glob: "*.js"
-			}
-		
-            steps {                
-                echo 'Hello World changeset JS'
-            }
-        }
+pipeline {	
+    agent any	
+    options {	
+		timestamps()
+		overrideIndexTriggers(true)
     }
-}
+    stages {	
+        stage('Build') {	
+            steps {
+                echo 'Hello World 5'
+            }	
+        }	
+    }	
+}	
